@@ -1,9 +1,67 @@
 <!--Curso de Aplicaciones web - Sistemate.net-->
 <html>
     <head>
-
+        <title>Mi primer pagina!</title>
     </head>
     <body>
-       
+        <h1>Titulo uno</h1>
+        <h2>Titulo dos</h2>
+        <h3>Titulo tres</h3>
+        <h4>Titulo cuatro</h4>
+        <h5>Titulo cinco</h5>
+        <h6>Titulo seis</h6>
+        <p>
+            <b>Texto en Negrita</b><br>
+            <u>Texto Subrayado</u><br>
+            <i>Texto en Cursiva</i><br>
+        </p>
+        <p>Estos son Hipervinculos:</p>
+        <!--
+        Esto es un hipervinculo a un documento dentro de nuestro propio sitio
+        para que funcione los dos documentos deben de estar en la misma carpeta
+        o bien, se debe espicificar la ruta absoluta del otro documento.
+        -->
+        <a href="noticias.html" target="_blank">Noticias</a>
+        <!--
+        Analicemos el hipervinculo: vemos que la etiqueta es <a></a> pero tiene
+        una particularidad, tiene propiedades, a las cuales podemos asignarle valores
+        una de ellas es href que define a donde dirigira nuestro vinculo.
+        otro que agregamos es target que sirve para definir donde se abrira el vinculo
+        si en la misma pagina o en otra pestaña y demas.
+        con el valor _blank decimos que abra en una nueva ventana.
+        -->
+        
+        <!--Y si queremos un Hipervinculo a otro sitio, es muy sensillo:-->
+        <a href="http://www.google.com" target="_blank">Vamos a google</a>
+        
+        <p>AHORA VEAMOS UNA LISTA EN HTML</p>
+
+        <ul>
+            <li><p>items uno</p></li>
+            <li><p>items dos</p></li>
+            <li><p>items tres</p></li>
+        </ul>
+        <p>Usamos <b>ul</b> para decir que es una lista y li para definir los items
+            de la misma. <br>
+            Ahora veamos una lista anidada</p>
+        <ul>
+            <li><p>items uno</p></li>
+            <li><p>items dos</p>
+                <ul>
+                    <li><p>sub-items uno</p></li>
+                    <li><p>sub-items dos</p></li>
+                    <li><p>sub-items tres</p></li>
+                </ul>
+            </li>
+            <li><p>items tres</p></li>
+        </ul>
+        
+        <p>Y si queremos una lista numerada usaremos <b>ol</b> en vez de <b>ul</b></p>
+        
+        <ol>
+            <li><p>items uno</p></li>
+            <li><p>items dos</p></li>
+            <li><p>items tres</p></li>
+        </ol>
     </body>
 </html>
