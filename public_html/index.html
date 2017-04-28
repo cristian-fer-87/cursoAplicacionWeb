@@ -1,6 +1,17 @@
+<!DOCTYPE html> <!--Declaración de html5-->
 <!--Curso de Aplicaciones web - Sistemate.net-->
-<html>
+<html lang="es-ES"> <!--Definición del lenguaje del sitio.-->
     <head>
+        <!--Definicion de la codificación. aquí arreglamos el tema de los acentos. -->
+        <meta name="encoding" charset="utf-8" />
+        <!--Define el nombre de la aplicación web-->
+        <meta name="application-name" content="Sistema de Gestion de Productos" />
+        <!--Sirve para describir nuestra aplicación web.-->
+        <meta name="description" content="Sistema creado en el curso de aplicaciones web de Sistemate"/>
+        <!--Definición del autor del sitio o aplicación-->
+        <meta name="author" content="Sistemate, contacto@sistemate.net">
+        <!--Sirve para definir etiqueta para los buscadores-->
+        <meta name="keywords" content="sistema, carrito de compras, pedidos" />
         <title>Mi primer pagina!</title>
     </head>
     <body>
@@ -63,5 +74,36 @@
             <li><p>items dos</p></li>
             <li><p>items tres</p></li>
         </ol>
+        
+        <!--Agreango una imagen a nuestro documeto-->
+        <h3>Esto es una imagen</h3>
+        <img src="imagenes/logo_sisteblog.png" alt="Logo de Sistemate">
+        
+        <h3>Imagen con hipervinculo</h3>
+        <a href="http://sistemate.net"><img src="imagenes/logo_sisteblog.png" alt="Logo de Sistemate"></a>
+    
+    <h3>Mi primer tabla</h3>
+    <table border="1">
+        
+        <tr>
+            <td colspan="3">Censo del 2015</td>
+        </tr>
+        <tr>
+            <td rowspan="5">Tres Paises</td>
+        </tr>
+        <tr>
+            <th>Paises</th><th>Cantidad de habitantes</th>
+        </tr>
+        <tr>
+            <td>Argentina</td><td>43,42 millones</td>
+        </tr>
+        <tr>
+            <td>Brasil</td><td>207,8 millones</td>
+        </tr>
+        <tr>
+            <td>Perú</td><td>31,38 millones</td>
+        </tr>
+    </table>
+    
     </body>
 </html>
