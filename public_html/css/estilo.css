@@ -7,25 +7,43 @@ and open the template in the editor.
     Created on : 11/05/2017, 11:43:56
     Author     : cristian
 */
+/*Declaracación de una clase, en este caso "global"*/
 .global{
+    /*con width definimos el ancho de la clase y como global es la 
+    clase que contiene a las demas clases, todas deberan tener 
+    el mismo ancho*/
     width: 1022px;
+    /*Con margin establecemos esblecemos los margenes de cada clase
+    o elemento, se suele dar valor en pixeles y se puede declarar
+    pero en este caso ponemos 0 auto para que global quede centrado*/
     margin: 0 auto;
 }
 .cabecera{
     width: 1022px;
+    /*Con height establecemos el alto, en blogal no lo establecimos
+    porque no sabemos cuan alto será ya que es variable.*/
     height: 250px;
+    /*background-color sirve para definir el color de fondo, se puede
+    asignavor valor en palabras o bien en formato hexadecimal color*/
     background-color: beige;
+    /*margin-bottom es la variante de margin, sirve para definir
+    el margen de abajo de un elemento buttom-> abajo*/
     margin-bottom: 0; 
 }
 .cabecera h1 {
+    /*text-align nos permite definir la alineación del texto*/
     text-align: center;
+    /*Color nos permite definir el color del texto*/
     color: tomato;
+    /*Otra variante de margin, en este caso el margen de arriba.*/
     margin-top: 0;
 }
 .navegador{
     width: 1022px;
-    height: 40px;
+    height: 50px;
     background-color: bisque;
+    /*Padding es similar a margin pero es el espacio que hay ente
+    el elemento y el borde del mismo. Lo veremos en detalle mas adelante*/
     padding: 0;
     margin-top: 0;
     margin-left: 0;
@@ -34,29 +52,41 @@ and open the template in the editor.
     margin-top: 0;
     margin-left: 0;
     padding: 0;
-    list-style-type: none;
 }
 .navegador ul li {
    margin-top: 0;
    margin-left: 0;
+   margin-right: 0;
+   padding: 0;
+   /*Display no permite ordenar los elementos, en este caso estamos
+   diciendo que los li iran uno al aldo del otro (en la misma linea)*/
    display: inline-block;
+   /*Es posible asignar un ancho variable mediante una medida en porcentaje
+   en este caso como tenemos 4 elemento li pusimos 25%*/
    width: 25%;
+   height: 50px;
+   /*list-style-type permite definir el tipo de viñetas de las listas
+   por decento es un circulo negro, por eso ponemos none para que no
+   tenga viñeta las listas.*/
    list-style-type: none;
+
 }
+.navegador ul li p{
+    text-align: center;
+    margin-top: 15px;
+}
+/*Hover es un pseudomarcado que nos permite hacer referencia al evento
+de posicionar el punto encima de un elemento. Entonces al pasar el
+puntero por encima de los elementos li cambiará el color de fondo*/
 .navegador ul li:hover {
-   display: inline-block;
-   width: 25%;
    background-color: whitesmoke;
 }
 
-.navegador ul li p{
-    margin-top: 10px;
-    text-align: center;
-}
 .cuerpo{
-    
     width: 1020px;
     height: 100%;
+    /*Estas dos lineas definen bordes, la signación de valores es la siguiente:align-content: 
+    color tipo tamaño*/
     border-left: slategrey solid 1px;
     border-right: slategrey solid 1px;
     
@@ -76,5 +106,6 @@ and open the template in the editor.
 .pie p{
     margin-top: 0;
     text-align: center;
+    /*Definición del tamaño de la letra.*/
     font-size: 8px;
 }
