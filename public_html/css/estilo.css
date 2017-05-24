@@ -7,7 +7,21 @@ and open the template in the editor.
     Created on : 11/05/2017, 11:43:56
     Author     : cristian
 */
+/*Importamos fuentes de google fonts es muy muy sencillo busca en el blog
+como hacerlo*/
+@import url('https://fonts.googleapis.com/css?family=Handlee|Pontano+Sans');
+
 /*Declaracación de una clase, en este caso "global"*/
+body{
+    /*Podemos una imagen de fondo,*/
+    background-image: url(../imagenes/patron1.png);
+    /*definimos que la imagen se vaya repitiendo hasta abarcar toda la pantalla.*/
+    background-repeat: repeat;
+    /*sacamos el margen del body para que no queden espacios en blanco*/
+    margin: 0px;
+    /*lo mismo hacemos con el padding*/
+    padding: 0;
+}
 .global{
     /*con width definimos el ancho de la clase y como global es la 
     clase que contiene a las demas clases, todas deberan tener 
@@ -17,15 +31,36 @@ and open the template in the editor.
     o elemento, se suele dar valor en pixeles y se puede declarar
     pero en este caso ponemos 0 auto para que global quede centrado*/
     margin: 0 auto;
+    /*Le ponemos un color de fondo al cuerpo para que tape la imagen
+    de fondo que se repite del body*/
+    background-color: white;
+}
+.contenedorCabecera{
+    /*sacamos lor margenes*/
+    margin: 0;
+    /*Decimos que abarque toda la pantalla de manera horizontal con 100%*/
+    width: 100%;
+    /*background-color sirve para definir el color de fondo, se puede
+    asignavor valor en palabras o bien en formato hexadecimal color*/
+    /*Ponemos una imagen de fondo vistosa que no interfiera con los texto
+    que van a ir delante de ella Y como no se va a repetir tiene que ser muuuy ancha
+    ya que dependiendo la pantalla del usuario puede ser que no abarque toda.*/
+    background-image: url(../imagenes/amping.png);
+    /*definimos el alto*/
+    height: 250px;
 }
 .cabecera{
+    /*Con margin establecemos esblecemos los margenes de cada clase
+    o elemento, se suele dar valor en pixeles y se puede declarar
+    pero en este caso ponemos 0 auto para que global quede centrado*/
+    margin: 0 auto;
+    /*definimos el ancho, q es el mismo que navegacionCentro y cuerpo
+    para que todo quede centrado*/
     width: 1022px;
     /*Con height establecemos el alto, en blogal no lo establecimos
     porque no sabemos cuan alto será ya que es variable.*/
     height: 250px;
-    /*background-color sirve para definir el color de fondo, se puede
-    asignavor valor en palabras o bien en formato hexadecimal color*/
-    background-color: beige;
+
     /*margin-bottom es la variante de margin, sirve para definir
     el margen de abajo de un elemento buttom-> abajo*/
     margin-bottom: 0; 
@@ -34,26 +69,58 @@ and open the template in the editor.
     /*text-align nos permite definir la alineación del texto*/
     text-align: center;
     /*Color nos permite definir el color del texto*/
-    color: tomato;
+    color: #F2F2F2;
     /*Otra variante de margin, en este caso el margen de arriba.*/
     margin-top: 0;
+    /*Definimos una estilo de funete con font-family*/
+    font-family: 'Handlee', cursive;
+    /*definición del tamaño de la letra.*/
+    font-size: 40px;
+}
+.info{
+    /*Como no hay casa nada en el div cabeceraCentro, no nos procupamos mucho
+    para declarar este div*/
+    height: 100px;
+}
+.info p{
+    /*sacamos todos los margenes*/
+    margin: 0;
+    /*le damos un padding para alejarlo un poco tope de la pagina*/
+    padding-top: 10px;
+    /*lo mismo que arriba*/
+    padding-right: 10px;
+   /*ponemos el texto a la derecha*/
+    text-align: right;
+    /*Usamos una de las fuentes de google fonts*/
+    font-family: 'Pontano Sans', cursive;
+    /*Definimos el tamaño para el parrafo*/
+    font-size: 15px;
+    color: #F2F2F2;
+    
 }
 .navegador{
-    width: 1022px;
+    width: 100%;
     height: 50px;
-    background-color: bisque;
+    background-color: #FF822D;
     /*Padding es similar a margin pero es el espacio que hay ente
     el elemento y el borde del mismo. Lo veremos en detalle mas adelante*/
     padding: 0;
-    margin-top: 0;
-    margin-left: 0;
+    margin: 0;
 }
-.navegador ul{
+.navegadorCentro{
+    height: 50px;
+    margin: 0 auto;
     margin-top: 0;
-    margin-left: 0;
+    width: 1022px;
     padding: 0;
 }
-.navegador ul li {
+.navegadorCentro ul{
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+    padding: 0;
+}
+.navegadorCentro ul li {
    margin-top: 0;
    margin-left: 0;
    margin-right: 0;
@@ -71,24 +138,27 @@ and open the template in the editor.
    list-style-type: none;
 
 }
-.navegador ul li p{
+.navegadorCentro ul li {
     text-align: center;
-    margin-top: 15px;
+    color: #F2F2F2;
+    font-family: 'Pontano Sans', cursive;
+    /*Con esta linea estamos definiendo que el texto sera todo en mayuscula*/
+    text-transform: uppercase;
+    font-size: 16px;
 }
+
 /*Hover es un pseudomarcado que nos permite hacer referencia al evento
 de posicionar el punto encima de un elemento. Entonces al pasar el
 puntero por encima de los elementos li cambiará el color de fondo*/
-.navegador ul li:hover {
+.navegadorCentro ul li:hover {
    background-color: whitesmoke;
+   color: #424242;
 }
 
 .cuerpo{
-    width: 1020px;
+    width: 1010px;
+    margin: 0 auto;
     height: 100%;
-    /*Estas dos lineas definen bordes, la signación de valores es la siguiente:align-content: 
-    color tipo tamaño*/
-    border-left: slategrey solid 1px;
-    border-right: slategrey solid 1px;
     
 }
 .cuerpo p{
@@ -97,15 +167,74 @@ puntero por encima de los elementos li cambiará el color de fondo*/
     margin-left: 10px;
     margin-right: 10px;
 }
+
+.izquierda{
+    width: 500px;
+    border: 1px solid #BDBDBD;
+    /*con float podemos decir que un div va a ser flotante es decir que puede
+    "flotar" al lado de otro elementos como por ejemplo el div "derecha"*/
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #424242;
+    font-family: 'Pontano Sans', cursive;
+    font-size: 16px;
+}
+.izquierda form{
+    margin: 10px;
+}
+.izquierda form input{
+    border: 1px solid #BDBDBD;
+}
+.derecha{
+    width: 500px;
+    /*lo mismo que en el div izquirda nada mas que este flota a la derecha
+    como veran el resultado es que uno esté al lado del otro*/
+    float: right;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.cuerpo h1{
+    color: #424242;
+    font-family: 'Pontano Sans', cursive;
+    font-size: 18px;
+    margin: 0;
+    padding-top: 10px;
+}
+
 .pie{
     margin-top: 0;
     width: 1022px;
-    height: 60px;
-    background-color: burlywood;
+    height: 160px;
+    background-color: #00A8B2;
+    /*con clear:both evitamos que el pie quede sobre los elementos flotantes que
+    estan dentro del cuerpo del sitio*/
+    clear:both;
+    border-top: 4px solid #424242;
 }
 .pie p{
-    margin-top: 0;
+    padding-top: 10px;
     text-align: center;
     /*Definición del tamaño de la letra.*/
-    font-size: 8px;
+    font-size: 12px;
+    color: white;
+    font-family: 'Pontano Sans', cursive;
+}
+.enlacesPie{
+    width: 330px;
+    /*como este div tiene un ancho pequeño al defenirlo como float:left se 
+    ubicarán uno al lado del otro separados por 10px que se establecen mas
+    abajo con el margin-left. Para ver el comportamiento mas facil pueden
+    ponerle un backgroun-color asi se parecia mejor*/
+    float: left;
+    margin-left: 10px;
+}
+.enlacesPie a{
+    font-size: 15px;
+    color: white;
+    font-family: 'Pontano Sans', cursive;
+    text-decoration: none;
+}
+.enlacesPie a:hover{
+    text-decoration: underline;
 }

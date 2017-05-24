@@ -12,19 +12,83 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="css/estilo.css" media="screen" />
     </head>
     <body>
-        <div class="global">
+        <!--Creamos una clase contenedorCabecera que abarca el 100% del sitio
+        y le agregamos un fondo, una imagen-->
+        <div class="contenedorCabecera">
+            <!--cabecera no tiene fondo, solamente sirve para centrar los 
+            elementos que contiene-->
             <div class="cabecera">
-                <h1>Empresa</h1>
+                <div class="info">
+                    <p>Teléfono: 3764 - 669966<br>
+                        Lunes a viernes 8:00hs a 16:00hs</p>
+                </div>
+                <h1>Sistemate.net!</h1>
             </div>
-            <nav class="navegador">
+        </div>
+        <!--Hacemos lo mismo que en contenedorCabecera creamos un nuevo div
+        que abarque el 100%-->
+        <div class="navegador">
+            <!--Al igual que cabecera navegadorCentro solamente sirve para centrar
+            los elementos.-->
+            <nav class="navegadorCentro">
                 <ul>
                     <li><p>Inicio</p></li><li><p>Mis Pedidos</p></li><li><p>Mis Movimientos</p></li><li><p>Mis Tarjetas</p></li>
                 </ul>
-            </nav>
+            </nav>    
+        </div>
+        <div class="global">
             <div class="cuerpo">
-                <p>Todo el contenido</p>
+                <h1>Formulario de Contacto.</h1>
+                <!--Izquierda un div flotante a la izquierda (float:left)-->
+                <div class="izquierda">
+                    <form action="#" method="POST">
+                        <label for="nombre">Nombre</label> <br/>
+                        <input type="text" id="nombre" name="nombre" value="" /><br/>
+                        <label for="apellido">Apellido</label> <br/>
+                        <input type="text" id="apellido" name="apellido" value="" /><br/>
+                        <label for="descripcion">Descripción del producto</label> <br/>
+                        <textarea id="descripcion" name="descripcion" cols="50" rows="8"></textarea>
+                    </form>
+                </div>
+                <!--Un div flotante a la derecha float:right-->
+                <div class="derecha">
+                    <!--Que es esto? muy simple un código que nos proporciona google para
+                    incluir un mapa dentro de nuestro sitio, solamente se copia y pega
+                    y tiene que nodificar el ancho y algo a gusto-->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d20042.8549836062!2d-55.90
+                            221992931979!3d-27.37229021962094!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9457be3500539
+                            6d1%3A0x8a4a121b48a8fb43!2sFelix+de+Azara+1957%2C+N3301KLG+Posadas%2C+Misi%C3%B3nes
+                            !5e0!3m2!1ses-419!2sar!4v1495628835595" 
+                            width="500" height="280" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
             </div>
-            <footer class="pie"><p>Pie de página</p></footer>
+            <!--pie de pagina del mismo ancho que el cuepo, tiene un borde top
+            gris oscuro-->
+            <footer class="pie">
+                <p>Sistemate.net - Todos los derechos reservados.</p>
+                <!--Un div repetido 3 veces que se acomodan uno al lado del otro-->
+                <div class="enlacesPie">
+                    <ul>
+                        <li><a href="#">Mis pedidos</a></li>
+                        <li><a href="#">Mis movimientos</a></li>
+                        <li><a href="#">Mis tarjetas</a></li>
+                    </ul>
+                </div>
+                <div class="enlacesPie">
+                    <ul>
+                        <li><a href="#">Mis pedidos</a></li>
+                        <li><a href="#">Mis movimientos</a></li>
+                        <li><a href="#">Mis tarjetas</a></li>
+                    </ul>
+                </div>
+                <div class="enlacesPie">
+                    <ul>
+                        <li><a href="#">Mis pedidos</a></li>
+                        <li><a href="#">Mis movimientos</a></li>
+                        <li><a href="#">Mis tarjetas</a></li>
+                    </ul>
+                </div>
+            </footer>
         </div>
     </body>
 </html>
